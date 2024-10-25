@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>YouTube Vues Challenge</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js" defer></script>
+    </head>
+    <body>
+
+    <h1>YouTube Vues Challenge</h1>
+    <div class="container">
+        <div class="video" id="video1">
+            <img src="" alt="Miniature 1" id="thumbnail1">
+            <button onclick="chooseVideo(1)">Choisir cette vidéo</button>
+            <div id="video1-info"></div> <!-- Contiendra les informations sur la vidéo 1 -->
+        </div>
+        <div class="video" id="video2">
+            <img src="" alt="Miniature 2" id="thumbnail2">
+            <button onclick="chooseVideo(2)">Choisir cette vidéo</button>
+            <div id="video2-info"></div> <!-- Contiendra les informations sur la vidéo 2 -->
+        </div>
+    </div>
+
+    <!-- Div pour afficher le chronomètre -->
+    <div id="countdown" style="font-size: 24px; text-align: center; margin-top: 20px;"></div>
+
+    </body>
+</html>

@@ -1,0 +1,77 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f9f9f9;
+    overflow: hidden;
+    position: relative; /* Pour gérer la superposition du cercle */
+    z-index: 1;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    z-index: 10; /* Assurer que la vidéo soit au-dessus du cercle */
+    position: relative;
+}
+
+.video {
+    text-align: center;
+    position: relative; /* Nécessaire pour positionner correctement le cercle */
+    z-index: 10; /* Assurer que la vidéo soit au-dessus du cercle */
+}
+
+img {
+    width: 40%;
+    height: auto;
+    border: 2px solid #ddd;
+}
+
+button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #1a73e8;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #155cb0;
+}
+
+/* Style pour le cercle qui va s'agrandir */
+.expanding-circle {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    z-index: 5; /* Derrière la vidéo */
+    animation: expand 1s ease-out forwards;
+    transform: translate(-50%, -50%); /* Centrer le cercle au niveau de sa position */
+}
+
+.persistent-background {
+    z-index: -1; /* Mettre en arrière-plan après l'animation */
+}
+
+@keyframes expand {
+    from {
+        width: 0;
+        height: 0;
+        opacity: 1;
+    }
+    to {
+        width: 300vw; /* S'assurer que ça couvre tout l'écran */
+        height: 300vw; /* S'assurer que ça couvre tout l'écran */
+        opacity: 1; /* Garder le fond visible */
+    }
+}
